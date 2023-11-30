@@ -1,0 +1,33 @@
+//java code
+import java.util.Random;
+import java.util.Scanner;
+
+public  class Main {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int randomnum = rand.nextInt(101);
+
+        int count=0;
+        while (true) {
+            System.out.println("Enter your guess(1-100)");
+            Scanner scan = new Scanner(System.in);
+            count++;
+            int playerguess = scan.nextInt();
+            if (playerguess == randomnum) {
+                System.out.println("Correct ! You Win!");
+                System.out.println("it took you"+count+"tries!");
+                break;
+
+            } else if (randomnum > playerguess) {
+                System.out.println("nope! the number is higher guess  Again.!");
+
+
+            } else {
+                System.out.println("NOPE! the number is lower, guess again.");
+            }
+            //System.out.println("random number is " + randomnum);
+        }
+    }
+}
+
+// end of code
